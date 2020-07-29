@@ -193,6 +193,7 @@ Resources:
                 - lambda.amazonaws.com
             Action:
               - sts:AssumeRole
+      PermissionsBoundary: Sub "arn:aws:iam::${AWS::AccountId}:policy/amp_boundary_policy"
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
 
